@@ -2,7 +2,7 @@
 To install all the necessary packages:
 ```
 sudo apt install virtualenv
-virtualenv -m python3 venv
+virtualenv -p python3 venv
 source venv/bin/activate
 pip3 install -r requirements.txt
 ```
@@ -25,6 +25,7 @@ python3 src/train.py --dataset_dir /path/to/dataset
 This will train a model with default hyper parameters. These parameters
 can be changed by inline arguments. Run `python3 src/train.py --help`
 to see how to overwrite them.
+![learning_curves](resources/learning_curves.png)
 
 At the end of training, by default the trained model and learning curves
 will be exported to `resources` folder.
@@ -46,7 +47,7 @@ python3 src/inference.py \
     --label_mapping path/to/label_mapping.csv \
     --image_annotation_file path/to/tomato_annotations.json \
 ```
-![tomato_cam](static/example2.png)
+![tomato_cam2](static/example2.png)
 
 # Resources
 [1] [https://www.tensorflow.org/](https://www.tensorflow.org/)
